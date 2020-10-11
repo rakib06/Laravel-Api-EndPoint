@@ -18,10 +18,12 @@ Route::get('/', function () {
 });
 
 Route::resource('country', 'Country\CountryController');
-/* For all kinds of url */
+/* For all kinds of url 
 Route::get('/{any?}', function () {
     return view('app');
 })->where('any', '[\/\w\.-]*');
+*/
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
