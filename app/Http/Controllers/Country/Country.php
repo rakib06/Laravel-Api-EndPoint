@@ -39,7 +39,7 @@ class Country extends Controller
     {
         $rules = [
             'name' => 'required|min:3',
-            'iso' => 'required|min:2|max:2',  
+            'iso' => 'required|min:2|max:2|unique:_z_country',  
         ];
         $validator = Validator::make($request->all(), $rules);
         if($validator->fails()){
